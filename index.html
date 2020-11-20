@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>Dati studente:
+      <ul id="dati-studente">
+
+      </ul>
+    </p>
+    <p>Dati studenti:
+      <ul id="datistudenti">
+
+      </ul>
+    </p>
+
+    <script type="text/javascript">
+    //Creare un oggetto che descriva uno studente con le seguenti proprietà: nome, cognome, età. Stampare attraverso il for in tutte le proprietà
+    var studente = {
+      "Nome": "Emanuel",
+      "Cognome": "Rista",
+      "Età": 32
+    };
+
+    for(var key in studente) {
+      document.getElementById('dati-studente').innerHTML += "<li>" + studente[key] + "</li>";
+    }
+
+    var studenti = [
+      {
+        "Nome": "Giuseppe",
+        "Cognome": "Conte"
+      },
+      {
+        "Nome": "Lucia",
+        "Cognome": "Azzolina"
+      },
+      {
+        "Nome": "Luigi",
+        "Cognome": "Di Maio"
+      }
+    ];
+
+
+    studenti.forEach(student => datistudenti.innerHTML += "<br>" + Object.values(student).join(" "));
+
+    </script>
+  </body>
+</html>
